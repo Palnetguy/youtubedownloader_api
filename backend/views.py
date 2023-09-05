@@ -7,9 +7,8 @@ from rest_framework.response import Response
 
 @api_view(['POST'])
 def download_yt_url(request):
-    url = request.data['url']
+    url = request.data
 
-    # https://youtube.com/watch?v=2lAe1cqCOXo
     yt = YouTube(url)
 
     list_fo_options = []
